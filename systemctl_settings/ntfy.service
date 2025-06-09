@@ -1,0 +1,12 @@
+[Unit]
+Description=This program basically runs our entire notification system
+Documentation=https://www.ntfy.sh
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/ntfy serve
+Restart=always
+
+
+[Install]
+WantedBy=multi-user.target
